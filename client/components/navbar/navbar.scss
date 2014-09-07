@@ -1,0 +1,70 @@
+#navbar{
+  background-color: $interface-bg-dark;
+  border-color: $interface-bg-light;
+  border-bottom-width: 3px;
+  .navbar-brand {
+    transition: color 500ms;
+    color: $interface-txt-base;
+    &, span {
+      font-family: 'Lobster';
+      // font-family: 'guardiansregular';
+    }
+    span {
+      position: relative;
+      left: -3px;
+      color: inherit;
+    }
+    font-size: 32px;
+    &:hover{
+      transition: color 500ms;
+      color: $interface-txt-light;
+    }
+  }
+}
+
+#navbar-main{
+  &.navbar-collapse {
+    border: none;
+    box-shadow: none;
+  }
+
+  .navbar-nav > li, .dropdown-menu > li{
+    a{
+      transition: color 200ms;
+      transition: background-color 200ms;
+      color: $interface-txt-base;
+      background-color: $interface-bg-dark;
+    }
+    &.active{
+      a {
+          background-color: $interface-bg-light;
+          color: $interface-txt-light;
+      }
+    }
+    &:not(.active)>a:hover{
+
+        transition: color 200ms;
+        transition: background-color 200ms;
+        background-color: $interface-bg-semi-light;
+        color: $interface-txt-light;
+
+      // ul.dropdown-menu>li>a:hover {
+      //   transition: color 200ms;
+      //   transition: background-color 200ms;
+      //   background-color: $interface-bg-semi-light;
+      //   color: $interface-txt-light;
+      // }
+    }
+
+    .dropdown-menu {
+      background-color: $interface-bg-dark;
+      margin-top: 3px;
+      border-top: none;
+    }
+
+    li.divider {
+      background-color: $interface-bg-light;
+    }
+  }
+
+}

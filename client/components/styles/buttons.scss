@@ -1,0 +1,16 @@
+// Social
+.btn-facebook {
+  @include button-variant($btn-text, $btn-facebook-background-highlight, $btn-facebook-background);
+}
+
+.btn-twitter {
+  @include button-variant($btn-text, $btn-twitter-background, $btn-twitter-background-highlight);
+}
+
+.btn-github {
+  @include button-variant($btn-text-alt, $btn-github-background, $btn-github-background-highlight);
+}
+
+.btn-google-plus {
+  @include button-variant($btn-text, $btn-google-plus-background, $btn-google-plus-background-highlight);
+}

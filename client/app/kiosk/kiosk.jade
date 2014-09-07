@@ -1,0 +1,23 @@
+//- div(ng-include='"components/navbar/navbar.html"')
+
+#main-content.KioskCtrl
+  .container#challenges
+    .row
+      .col-lg-12
+        .status
+          | There are {{viewerCount}} people watching you
+        .challenge-list
+          span.title Available Challenges
+          ul
+            li(ng-repeat='thing in awesomeThings')
+              a(ng-href='/kiosk/confirm/{{thing._id}}')
+                | {{thing.name}}
+              .reward
+                span.btc
+                  b {{thing.btc}}
+                  |  BTC
+                span.usd
+                  b {{thing.usd}}
+                  |  USD
+
+//- div(ng-include='"components/footer/footer.html"' include-replace)

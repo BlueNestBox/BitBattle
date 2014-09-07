@@ -1,0 +1,143 @@
+.MainCtrl{
+
+  #banner {
+    margin-top: 30px;
+    padding: 20px;
+    border-bottom: none;
+    text-align: center;
+    // background-color: $interface-bg-dark;
+
+    h1 {
+      font-size: 60px;
+      line-height: 1;
+      letter-spacing: -1px;
+      margin: 0 0 10px 0;
+      color: $interface-txt-light;
+    }
+
+    p.lead {
+      span {
+        font-size: 12px;
+        margin: 0 5px;
+      }
+    }
+
+    .btn {
+      transition: color 200ms;
+      transition: border-color 200ms;
+      background-color: $interface-bg-dark;
+      border: 2px solid $interface-bg-light;
+      color: $interface-txt-base;
+      font-size: 32px;
+
+      .icon {
+        left: 5px;
+        top: -2px;
+        color: inherit;
+        font-size: 20px;
+        position: relative;
+      }
+      &:hover{
+        transition: color 200ms;
+        transition: border-color 200ms;
+        color: $interface-txt-light;
+        border-color: $interface-txt-base;
+      }
+
+    }
+
+  }
+
+  .title {
+    font-size: 20px;
+    color: $interface-txt-base;
+    border-bottom: 4px solid $interface-bg-light;
+    width: 100%;
+    display: inline-block;
+    margin-bottom: 10px;
+    text-align: left;
+  }
+
+  .txt-light {
+    color: $interface-txt-light;
+  }
+
+  #challenges{
+
+    // .title {
+    //   font-size: 20px;
+    //   color: $interface-txt-dark;
+    // }
+
+
+
+    span.challenge {
+      font-size: 28px;
+      color: $interface-txt-light;
+      margin-bottom: 20px;
+      display: inline;
+      float: left;
+
+    }
+    .reward {
+      float: right;
+
+      span {
+        font-size: 15px;
+        float: right;
+        width: 100%;
+        text-align: right;
+        color: $interface-txt-btc-base;
+        b {
+          color: $interface-txt-btc-light;
+        }
+      }
+    }
+
+    ul{
+      border: none;
+      margin-top: 5px;
+      padding: 0;
+      li {
+        width: 100%;
+        display: inline-block;
+        height: 50px;
+        background-color: $interface-bg-dark;
+        margin: 0;
+        padding: 10px;
+        // padding-left: 0;
+        vertical-align: middle;
+        a{
+          border: none;
+          border-radius: 0;
+          color: $interface-txt-base;
+        }
+        a:hover{
+          border: none;
+          color: $interface-txt-light;
+        }
+        .reward>span{
+          font-size: 12px;
+        }
+      }
+    }
+  }
+
+  button.close {
+    color: $interface-txt-light;
+  }
+
+  .thing-form {
+    margin: 20px 0;
+    input {
+      height: 35px;
+    }
+    button, button>span {
+      color: white;
+    }
+    button {
+      background-color:  $interface-txt-link;
+      border: 2px solid $interface-bg-light;
+    }
+  }
+}

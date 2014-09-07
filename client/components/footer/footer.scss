@@ -1,0 +1,18 @@
+footer.footer {
+  background-color: $interface-bg-dark;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  left: 0;
+  height: $footer-height;
+  text-align: center;
+  padding: 7px 0 0 0;
+  margin-top: 40px;
+  border-top: 3px solid $interface-bg-light;
+
+  p {
+    color: $interface-txt-base;
+    font-size: 11px;
+  }
+
+}

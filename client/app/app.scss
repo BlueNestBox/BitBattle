@@ -1,0 +1,101 @@
+@import 'variables/variables.scss';
+@import 'bootstrap-sass-official/vendor/assets/stylesheets/bootstrap';
+@import 'font-awesome/scss/font-awesome';
+// @import '../assets/glyphicons/glyphicons.scss';
+
+/**
+ * Fonts
+ */
+@font-face {
+    font-family: 'guardiansregular';
+    src: url('/fonts/guardians-webfont.eot');
+    src: url('/fonts/guardians-webfont.eot?#iefix') format('embedded-opentype'),
+         url('/fonts/guardians-webfont.woff') format('woff'),
+         url('/fonts/guardians-webfont.ttf') format('truetype'),
+         url('/fonts/guardians-webfont.svg#guardiansregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+/**
+ * App-wide Styles
+ */
+html{
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+}
+
+
+body, p, div, span, ul, ol, li, th, td, tr, table, label, b, i, strong, h1, h2, h3, h4, h5, h6 {
+  color: $interface-txt-base;
+  font-family: 'Roboto', 'Helvetica Nueue', Helvetica, Arial, sans-serif;
+}
+
+a{
+  color: $interface-txt-link;
+}
+
+input.form-control, textarea.form-control {
+  background-color: $interface-bg-dark;
+  border: 2px solid $interface-bg-light;
+  color: $interface-txt-light;
+  &:focus{
+    box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px rgba(102, 175, 233, 0.3);
+  }
+}
+
+code {
+  background-color: $interface-bg-light;
+
+}
+
+
+.browsehappy {
+    margin: 0.2em 0;
+    background: #ccc;
+    color: #000;
+    padding: 0.2em 0;
+}
+
+#main-container {
+  min-height: 100%;
+  //height: 100%;
+  position: relative;
+  background-color: $interface-bg-base;
+}
+
+#main-content {
+  padding-bottom: $footer-height + 50;
+}
+
+/* Responsive: Portrait tablets and up */
+@media screen and (min-width: 768px) {
+    .container {
+        max-width: 730px;
+    }
+}
+
+// Component styles are injected through grunt
+// injector
+@import 'account/login/login.scss';
+@import 'admin/admin.scss';
+@import 'kiosk/confirm/kiosk/confirm.scss';
+@import 'kiosk/finish/kiosk/finish.scss';
+@import 'kiosk/kiosk.scss';
+@import 'kiosk/perform/kiosk/perform.scss';
+@import 'main/main.scss';
+@import 'footer/footer.scss';
+@import 'navbar/navbar.scss';
+@import 'styles/buttons.scss';
+@import 'variables/colors.scss';
+@import 'variables/dimensions.scss';
+@import 'variables/fonts.scss';
+@import 'variables/paths.scss';
+@import 'variables/variables.scss';
+// endinjector

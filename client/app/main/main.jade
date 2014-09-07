@@ -1,0 +1,49 @@
+div(ng-include='"components/navbar/navbar.html"')
+
+div#main-content.MainCtrl
+  header#banner.hero-unit
+    .container
+      .title
+        b(style="font-size:16px;margin-right:5px") Status
+        = ' '
+        span.txt-light Waiting for contestant
+      iframe(width="720" height="437" src="http://www.ustream.tv/embed/18858917?v=3&amp;wmode=direct&autoplay=true" scrolling="no" frameborder="0" style="border: 0px none transparent;")
+
+
+  .container#challenges
+    .row
+      .col-lg-12
+        .title Current Challenge
+        span.challenge Re-enact Michael Jackson's Thriller
+        .reward
+          span.btc
+            b 0.1
+            |  BTC
+          span.usd
+            b 48.50
+            |  USD
+        .challenge-list
+          span.title Upcoming Challenges
+          ul
+            li(ng-repeat='thing in awesomeThings')
+              a(href='#')
+                | {{thing.name}}
+              .reward
+                span.btc
+                  b {{thing.btc}}
+                  |  BTC
+                span.usd
+                  b {{thing.usd}}
+                  |  USD
+
+    form.thing-form
+      label Create a new challenge
+      p.input-group
+        input.form-control(type='text', placeholder='Challenge title', ng-model='newThing')
+        span.input-group-btn
+          button.btn.btn-primary(type='submit', ng-click='addThing()')
+            | Next
+            = " "
+            span.icon.icon-chevron-right
+
+div(ng-include='"components/footer/footer.html"' include-replace)
