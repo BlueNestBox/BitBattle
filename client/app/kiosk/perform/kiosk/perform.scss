@@ -1,0 +1,27 @@
+.PerformCtrl{
+
+  .title {
+    font-size: 20px;
+    color: $interface-txt-base;
+    border-bottom: 4px solid $interface-bg-light;
+    width: 100%;
+    display: inline-block;
+    margin-bottom: 10px;
+    text-align: left;
+  }
+
+  .txt-light {
+    color: $interface-txt-light;
+  }
+
+
+  .challenge-confirm {
+    margin-top: 20px;
+  }
+
+  .timer {
+    font-size: 30px;
+  }
+
+
+}

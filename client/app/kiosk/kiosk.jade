@@ -10,7 +10,7 @@
           span.title Available Challenges
           ul
             li(ng-repeat='thing in awesomeThings')
-              a(ng-href='/kiosk/confirm/{{thing._id}}')
+              a(ng-href='/kiosk/confirm?id={{thing._id}}')
                 | {{thing.name}}
               .reward
                 span.btc

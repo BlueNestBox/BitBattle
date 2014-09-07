@@ -18,6 +18,9 @@ function onConnect(socket) {
   });
 
   // Insert sockets below
+  require('../api/kiosk/perform/kiosk/perform.socket').register(socket);
+  require('../api/kiosk/get-challenge/kiosk/get-challenge.socket').register(socket);
+  require('../api/kiosk/confirm/kiosk/confirm.socket').register(socket);
   require('../api/ustream/ustream.socket').register(socket);
   require('../api/thing/thing.socket').register(socket);
 }

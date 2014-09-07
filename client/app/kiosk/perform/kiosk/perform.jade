@@ -1,2 +1,19 @@
-.col-md-12
-    | This is the kiosk/perform view.
+//- div(ng-include='"components/navbar/navbar.html"')
+
+#main-content.PerformCtrl
+  .container
+    .row
+      .col-lg-12
+        .challenge-confirm
+          span.title Your challenge is "
+            b {{challenge.name}}
+            | " for
+            b.btc  {{challenge.btc}}
+            |  BTC
+        .timer
+          | {{timer}}
+  header#banner.hero-unit
+    .container
+      iframe(width="720" height="437" src="http://www.ustream.tv/embed/18858917?v=3&amp;wmode=direct&autoplay=true" scrolling="no" frameborder="0" style="border: 0px none transparent;")
+
+//- div(ng-include='"components/footer/footer.html"' include-replace)

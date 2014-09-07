@@ -9,6 +9,9 @@ var errors = require('./components/errors');
 module.exports = function(app) {
 
   // Insert routes below
+  app.use('/api/kiosk/perform', require('./api/kiosk/perform'));
+  app.use('/api/kiosk/get-challenge', require('./api/kiosk/get-challenge'));
+  app.use('/api/kiosk/confirm', require('./api/kiosk/confirm'));
   app.use('/api/ustream', require('./api/ustream'));
   app.use('/api/things', require('./api/thing'));
   app.use('/api/users', require('./api/user'));

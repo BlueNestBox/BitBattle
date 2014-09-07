@@ -1,21 +1,21 @@
 //- div(ng-include='"components/navbar/navbar.html"')
 
-#main-content.KioskCtrl
-  .container#challenges
+#main-content.ConfirmCtrl
+  .container
     .row
       .col-lg-12
-        .challenge-list
-          span.title Available Challenges
-          ul
-            li(ng-repeat='thing in awesomeThings')
-              a(href='#')
-                | {{thing.name}}
-              .reward
-                span.btc
-                  b {{thing.btc}}
-                  |  BTC
-                span.usd
-                  b {{thing.usd}}
-                  |  USD
-
+        .challenge-confirm
+          span.title You selected "
+            b {{challenge.name}}
+            | " for
+            b.btc  {{challenge.btc}}
+            |  BTC
+        .challenge-form
+          span Enter your email address for payment:
+          form(name="confirm")
+            input.form-control.ng-pristine.ng-valid(placeholder="Email Address", type="email", ng-model="email", ng-required="true", name="email")
+            button.btn.btn-primary.btn-large(ng-click='readyUp()') I'm Ready
+              span.icon.icon-chevron-right
+            span.error(ng-show="confirm.email.$error.required && dirty") Email is required! :(
+            span.error(ng-show="confirm.email.$error.email && dirty") Email is invalid! :(
 //- div(ng-include='"components/footer/footer.html"' include-replace)
